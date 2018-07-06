@@ -1,0 +1,5 @@
+---
+applications:
+- name: lotteries
+  memory: 64M
+  instances: 2
