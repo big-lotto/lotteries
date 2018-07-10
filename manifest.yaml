@@ -2,4 +2,5 @@
 applications:
 - name: lotteries
   memory: 64M
+  disk: 16M
   instances: 2
