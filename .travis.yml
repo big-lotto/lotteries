@@ -1,15 +1,8 @@
 language: node_js
 node_js:
-- '6'
-- '6.9.2'
+- '6.x.x'
 - '7'
 - '8'
-# safelist
-branches:
-  only:
-  - master
-  - dev
-  - qas
 deploy:
   provider: cloudfoundry
   api: https://api.run.pivotal.io
@@ -20,7 +13,9 @@ deploy:
   space: big-lotto-dev
   on:
     repo: big-lotto/lotteries
-    branch: dev
+    branches:
+      only:
+      - dev
   provider: cloudfoundry
   api: https://api.run.pivotal.io
   username: fabiopagoti@gmail.com
@@ -32,5 +27,7 @@ deploy:
     big-lotto-qas
   on:
     repo: big-lotto/lotteries
-    branch: qas
+    branches:
+      only:
+      - qas
 
